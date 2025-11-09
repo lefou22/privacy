@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcana Insight Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --accent: #5234f9;
+      --bg: #eef2ff;
+      --bg-dark: #0b1120;
+      --panel: #ffffff;
+      --panel-dark: #0f172a;
+      --text: #111827;
+      --text-muted: #1f2937;
+      --text-dark: #f9fafb;
+      --border: rgba(82, 52, 249, 0.3);
+      --pill-bg: rgba(82, 52, 249, 0.12);
+      --pill-bg-dark: rgba(82, 52, 249, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background: linear-gradient(180deg, var(--bg) 0%, #ffffff 30%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        color: var(--text-dark);
+        background: linear-gradient(180deg, var(--bg-dark) 0%, #020617 30%);
+      }
+
+      .site-header,
+      .language-picker,
+      .privacy-policy {
+        background: var(--panel-dark);
+        color: var(--text-dark);
+      }
+
+      .privacy-policy {
+        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.4);
+      }
+
+      .language-picker {
+        background: var(--pill-bg-dark);
+        border-color: rgba(148, 163, 184, 0.45);
+      }
+
+      .language-picker select {
+        background: var(--panel-dark);
+        border-color: rgba(148, 163, 184, 0.45);
+        color: var(--text-dark);
+      }
+    }
+
+    .site-header {
+      background: var(--panel);
+      border-bottom: 4px solid var(--accent);
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+      color: var(--text-muted);
+    }
+
+    .site-header h1 {
+      margin: 0;
+      font-size: 2.25rem;
+      color: var(--accent);
+    }
+
+    .site-header p {
+      margin: 0.75rem 0 0;
+      font-size: 1rem;
+      color: var(--text);
+    }
+
+    .language-picker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      padding: 0.75rem 1rem;
+      border-radius: 999px;
+      background: var(--pill-bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .language-picker label {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: inherit;
+    }
+
+    .language-picker select {
+      appearance: none;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.4rem 1.75rem 0.4rem 0.75rem;
+      font-size: 0.95rem;
+      background: var(--panel);
+      color: var(--text);
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    main {
+      flex: 1;
+      max-width: 940px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    .privacy-container {
+      position: relative;
+      min-height: 320px;
+    }
+
+    .privacy-policy {
+      background: var(--panel);
+      border-radius: 18px;
+      padding: 2.75rem 2.5rem;
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.15);
+      transition: opacity 0.2s ease-in-out;
+      color: var(--text);
+    }
+
+    .privacy-policy header h1 {
+      margin: 0 0 1rem;
+      font-size: 2rem;
+      color: var(--accent);
+      text-align: center;
+    }
+
+    .privacy-intro,
+    .privacy-outro {
+      margin: 1rem 0 1.5rem;
+      font-size: 1.05rem;
+      color: var(--text-muted);
+    }
+
+    .privacy-section + .privacy-section {
+      margin-top: 2.25rem;
+    }
+
+    .privacy-section h2 {
+      margin: 0 0 0.75rem;
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+
+    .privacy-section p {
+      margin: 0;
+      font-size: 1.02rem;
+      color: var(--text);
+    }
+
+    .loading,
+    .error {
+      margin: 0;
+      font-size: 1rem;
+      text-align: center;
+      padding: 3rem 0;
+    }
+
+    .error {
+      color: #dc2626;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      padding: 1.75rem 1rem 2.5rem;
+      color: rgba(71, 85, 105, 0.75);
+    }
+
+    @media (max-width: 720px) {
+      .site-header {
+        padding: 2rem 1.25rem 1.5rem;
+      }
+
+      .site-header h1 {
+        font-size: 1.9rem;
+      }
+
+      .language-picker {
+        flex-direction: column;
+        padding: 0.75rem 1rem;
+      }
+
+      .language-picker select {
+        width: 100%;
+      }
+
+      main {
+        padding: 2.5rem 1.25rem 3rem;
+      }
+
+      .privacy-policy {
+        padding: 2.25rem 1.75rem;
+      }
+
+      .privacy-policy header h1 {
+        font-size: 1.75rem;
+      }
+
+      .privacy-section h2 {
+        font-size: 1.35rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Arcana Insight</h1>
+    <p id="effective-date">Effective Date: —</p>
+    <div class="language-picker">
+      <label for="locale-switcher">Language</label>
+      <select id="locale-switcher" aria-label="Select language"></select>
+    </div>
+  </header>
+  <main>
+    <div id="privacy-root" class="privacy-container">
+      <p class="loading">Loading privacy policy…</p>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 Arcana Insight. All rights reserved.
+  </footer>
+  <script>
+    (function () {
+      const basePath = '../locales/';
+      const manifestUrl = `${basePath}manifest.json`;
+      const root = document.getElementById('privacy-root');
+      const switcher = document.getElementById('locale-switcher');
+      const effectiveDate = document.getElementById('effective-date');
+      const message = (type, text) => {
+        root.innerHTML = '';
+        const paragraph = document.createElement('p');
+        paragraph.className = type;
+        paragraph.textContent = text;
+        root.appendChild(paragraph);
+      };
+
+      const toCandidates = (value) => {
+        if (!value) {
+          return [];
+        }
+
+        const lower = value.toLowerCase();
+        const parts = lower.split('-');
+        if (parts.length > 1) {
+          return [lower, parts[0]];
+        }
+
+        return [lower];
+      };
+
+      const fetchManifest = async () => {
+        const response = await fetch(manifestUrl, { cache: 'no-store' });
+        if (!response.ok) {
+          throw new Error('Could not load the privacy manifest.');
+        }
+
+        return response.json();
+      };
+
+      const getLanguageLabel = (() => {
+        try {
+          if (typeof Intl.DisplayNames === 'function') {
+            const displayNames = new Intl.DisplayNames(navigator.languages || [navigator.language || 'en'], {
+              type: 'language',
+            });
+            return (code, fallback) => displayNames.of(code) || fallback || code;
+          }
+        } catch (error) {
+          /* ignore runtime issues */
+        }
+
+        const fallbackLabels = {
+          en: 'English',
+          pt: 'Português',
+          es: 'Español',
+          fr: 'Français',
+        };
+
+        return (code, fallback) => fallbackLabels[code] || fallback || code;
+      })();
+
+      const renderOptions = (locales) => {
+        switcher.innerHTML = '';
+
+        locales.forEach((entry) => {
+          const option = document.createElement('option');
+          option.value = entry.code;
+          option.textContent = getLanguageLabel(entry.code, entry.title);
+          switcher.appendChild(option);
+        });
+      };
+
+      const installListeners = (manifest) => {
+        switcher.addEventListener('change', (event) => {
+          const selected = event.target.value;
+          if (!selected) {
+            return;
+          }
+
+          loadLocale(selected, manifest).then((success) => {
+            if (success) {
+              updateUrl(selected);
+            }
+          });
+        });
+      };
+
+      const updateUrl = (locale) => {
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', locale);
+        window.history.replaceState({}, '', url);
+      };
+
+      const pickLocale = (manifest) => {
+        const codes = new Map();
+        manifest.locales.forEach((entry) => {
+          const base = entry.code.toLowerCase();
+          codes.set(base, entry.code);
+          const primary = base.split('-')[0];
+          if (!codes.has(primary)) {
+            codes.set(primary, entry.code);
+          }
+        });
+
+        const params = new URLSearchParams(window.location.search);
+        const paramLocale = params.get('lang');
+        const desired = [];
+
+        if (paramLocale) {
+          desired.push(paramLocale);
+        }
+
+        if (navigator.languages) {
+          desired.push(...navigator.languages);
+        }
+
+        if (navigator.language) {
+          desired.push(navigator.language);
+        }
+
+        desired.push(manifest.defaultLocale);
+
+        for (const candidate of desired) {
+          const matches = toCandidates(candidate);
+          for (const item of matches) {
+            if (codes.has(item)) {
+              return codes.get(item);
+            }
+          }
+        }
+
+        return manifest.defaultLocale;
+      };
+
+      const loadLocale = async (locale, manifest) => {
+        const available = new Set(manifest.locales.map((entry) => entry.code));
+        if (!available.has(locale)) {
+          message('error', 'The selected language is not available.');
+          return false;
+        }
+
+        try {
+          message('loading', 'Loading privacy policy…');
+          const response = await fetch(`${basePath}${locale}.html`, { cache: 'no-store' });
+          if (!response.ok) {
+            throw new Error('Could not load the privacy policy for the selected language.');
+          }
+
+          const markup = await response.text();
+          root.innerHTML = markup;
+          switcher.value = locale;
+          document.documentElement.lang = locale;
+          return true;
+        } catch (error) {
+          message('error', error.message || 'Unable to display the privacy policy.');
+          return false;
+        }
+      };
+
+      const bootstrap = async () => {
+        try {
+          const manifest = await fetchManifest();
+          renderOptions(manifest.locales);
+          installListeners(manifest);
+          const locale = pickLocale(manifest);
+          updateEffective(manifest);
+          const loaded = await loadLocale(locale, manifest);
+          if (loaded) {
+            updateUrl(locale);
+          }
+        } catch (error) {
+          message('error', error.message);
+        }
+      };
+
+      const updateEffective = (manifest) => {
+        if (!effectiveDate) {
+          return;
+        }
+
+        const stamp = manifest.generatedAt;
+        if (!stamp) {
+          effectiveDate.textContent = 'Effective Date: —';
+          return;
+        }
+
+        try {
+          const locale = navigator.language || manifest.defaultLocale || 'en';
+          const formatter = new Intl.DateTimeFormat(locale, {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+          });
+          effectiveDate.textContent = `Effective Date: ${formatter.format(new Date(stamp))}`;
+        } catch (error) {
+          effectiveDate.textContent = `Effective Date: ${stamp}`;
+        }
+      };
+
+      bootstrap();
+    })();
+  </script>
+</body>
+</html>
